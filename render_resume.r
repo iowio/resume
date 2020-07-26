@@ -6,10 +6,10 @@
 # for the HTML and PDF rendering. This exercise is left to the reader.
 
 # Knit the HTML version
-rmarkdown::render("cv.rmd",
+rmarkdown::render("resume.Rmd",
                   params = list(pdf_mode = FALSE),
-                  output_file = "cv.html")
+                  output_file = "muge-cetinkaya.html")
 
 # Convert to PDF using Pagedown
-pagedown::chrome_print(input = "cv.html",
-                       output = "cv.pdf")
+pagedown::chrome_print(input = "muge-cetinkaya.html",
+                       output = "muge-cetinkaya.pdf")
