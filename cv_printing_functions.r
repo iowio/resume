@@ -40,10 +40,11 @@ create_CV_object <-  function(data_location,
     read_gsheet <- function(sheet_id){
       googlesheets4::read_sheet(data_location, sheet = sheet_id, skip = 1, col_types = "c")
     }
-    cv$entries_data  <- read_gsheet(sheet_id = "entries")
-    cv$skills        <- read_gsheet(sheet_id = "language_skills")
-    cv$text_blocks   <- read_gsheet(sheet_id = "text_blocks")
-    cv$contact_info  <- read_gsheet(sheet_id = "contact_info")
+    cv$entries_data     <- read_gsheet(sheet_id = "entries")
+    cv$skills           <- read_gsheet(sheet_id = "language_skills")
+    cv$text_blocks      <- read_gsheet(sheet_id = "text_blocks")
+    cv$contact_info     <- read_gsheet(sheet_id = "contact_info")
+    cv$software_skills  <- read_gsheet(sheet_id = "software_skills")
   } else {
     # Want to go old-school with csvs?
     cv$entries_data <- readr::read_csv(paste0(data_location, "entries.csv"), skip = 1)
@@ -233,7 +234,17 @@ Links {data-icon=link}
 print_contact_info <- function(cv){
   glue::glue_data(
     cv$contact_info,
-    "- <i class='fa fa-{icon}'></i> {contact}"
+    "- <i class='fa fa-{icon}'></i> <a href='{link}'>{contact}</a>"
+  ) %>% print()
+
+  invisible(cv)
+}
+
+#' @description Software skills section
+print_software_skills <- function(cv){
+  glue::glue_data(
+    cv$software_skills,
+    "- {skill}"
   ) %>% print()
 
   invisible(cv)
