@@ -25,7 +25,6 @@ CV <- create_CV_object(
   data_location = "https://docs.google.com/spreadsheets/d/105QMOQQd_eqK5RtstHvk8k7o5gHwY3kshMQFbUrbZ1M",  
   pdf_mode = params$pdf_mode
 )
-
 ```
 
 
@@ -52,7 +51,7 @@ datadrivencv::build_network_logo(CV$entries_data)
 ```
 
 
-```{r results="asis"}
+```{r results="asis", eval=FALSE}
 if(params$pdf_mode){
   cat("View this CV online with links at _muge.fr/resume_")
 } else {
@@ -89,9 +88,6 @@ Disclaimer {#disclaimer}
 --------------------------------------------------------------------------------
 
 The source code is available [on github.com/iowio/resume](https://github.com/iowio/resume).
-
-Last updated on `r Sys.Date()`.
-
 
 
 Main
