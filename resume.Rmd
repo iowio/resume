@@ -68,18 +68,18 @@ CV %>% print_contact_info()
 
 
 
-Language Skills {#skills}
+Language Skills {#languageskills}
 --------------------------------------------------------------------------------
 
 ```{r}
-CV %>% print_skill_bars()
+CV %>% print_skill_bars(skill_type = "language")
 ```
 
 Software Skills {#softwareskills}
 --------------------------------------------------------------------------------
 
 ```{r}
-CV %>% print_software_skill_bars()
+CV %>% print_skill_bars(skill_type = "software")
 ```
 
 
