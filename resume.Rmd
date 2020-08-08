@@ -50,7 +50,6 @@ Aside
 datadrivencv::build_network_logo(CV$entries_data)
 ```
 
-
 ```{r results="asis", eval=FALSE}
 if(params$pdf_mode){
   cat("View this CV online with links at _muge.fr/resume_")
