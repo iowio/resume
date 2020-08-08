@@ -79,7 +79,7 @@ Software Skills {#softwareskills}
 --------------------------------------------------------------------------------
 
 ```{r}
-CV %>% print_software_skills()
+CV %>% print_software_skill_bars()
 ```
 
 
