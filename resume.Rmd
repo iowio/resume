@@ -86,7 +86,7 @@ CV %>% print_skill_bars(skill_type = "software")
 Disclaimer {#disclaimer}
 --------------------------------------------------------------------------------
 
-The source code is available [on github.com/iowio/resume](https://github.com/iowio/resume).
+The source code for this resume is available [on github.com/iowio/resume](https://github.com/iowio/resume).
 
 
 Main
